@@ -27,13 +27,17 @@ myModel =
 -- Render state of application as Html
 myView : Model -> Html.Html Msg
 myView x = 
+  -- definitions
+  let blah = addOne 3 
+  in
   Html.div
     []
     [
       Html.button
         [Html.Events.onClick Click]
         [ Html.text "Click me"]
-      , Html.text (addOne 3)
+      , Html.text (let frog = addOne 3 in frog)
+      , Html.text blah
       , Html.text
         ( if x  == True
           then "Goodbye"
