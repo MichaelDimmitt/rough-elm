@@ -30,13 +30,13 @@ myView x =
   Html.div
     []
     [
-      Html.button 
-        [Html.Events.onClick Click] 
+      Html.button
+        [Html.Events.onClick Click]
         [ Html.text "Click me"]
       , Html.text (addOne 3)
-      , Html.text 
-        ( if x  == True 
-          then "Goodbye" 
+      , Html.text
+        ( if x  == True
+          then "Goodbye"
           else "Hello")
     ]
 
@@ -57,5 +57,4 @@ myInnerArray =
 
 addOne : Int -> String
 addOne x =
-  x + 1 toString
-
+  toString (x + 1)
