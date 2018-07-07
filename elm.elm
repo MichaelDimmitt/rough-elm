@@ -52,7 +52,7 @@ myButtonView i button =
       , Html.text (let frog = addOne 3 in frog)
       , Html.text blah
       , Html.text
-        ( if x  == True
+        ( if button  == True
           then "Goodbye"
           else "Hello")
     ]
