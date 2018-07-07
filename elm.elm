@@ -46,6 +46,7 @@ myButtonView i button =
       Html.button 
         [Html.Events.onClick (Click i)] 
         [ Html.text "Click me"]
+      , Html.text (addOne 3)
       , Html.text 
         ( if button  == True 
           then "Goodbye" 
@@ -75,4 +76,8 @@ myButton = Html.button [] myInnerArray
 myInnerArray : List(Html.Html msg)
 myInnerArray =
   [Html.text "Hello" ]
+
+addOne : Int -> String
+addOne x =
+  x + 1 toString
 
