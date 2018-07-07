@@ -33,11 +33,15 @@ myView x =
       Html.button 
         [Html.Events.onClick Click] 
         [ Html.text "Click me"]
-      , Html.text "Hello"
+      , Html.text 
+        ( if x  == True 
+          then "Goodbye" 
+          else "Hello")
     ]
 
 myUpdate : Msg -> Model -> Model 
-myUpdate x y = y
+-- take the view and the old model and return a new model which is not the old model
+myUpdate x y = not y
 
 -- double dash signifies a comment.
 -- button no longer used.
