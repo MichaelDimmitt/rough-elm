@@ -40,16 +40,20 @@ myView model =
 -- Render state of application as Html
 myButtonView : Int -> Bool -> Html.Html Msg
 myButtonView i button = 
+  -- definitions
+  let blah = addOne 3 
+  in
   Html.div
     []
     [
       Html.button 
         [Html.Events.onClick (Click i)] 
         [ Html.text "Click me"]
-      , Html.text (addOne 3)
-      , Html.text 
-        ( if button  == True 
-          then "Goodbye" 
+      , Html.text (let frog = addOne 3 in frog)
+      , Html.text blah
+      , Html.text
+        ( if x  == True
+          then "Goodbye"
           else "Hello")
     ]
 
