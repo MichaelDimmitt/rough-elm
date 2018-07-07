@@ -79,5 +79,4 @@ myInnerArray =
 
 addOne : Int -> String
 addOne x =
-  x + 1 toString
-
+  toString (x + 1)
