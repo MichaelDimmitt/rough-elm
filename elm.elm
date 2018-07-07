@@ -1,12 +1,13 @@
 import Html
-
+import Html.Attributes
+import Html.Events
 
 type alias Model
   = Bool
 
 -- algerbraic data type.
 type Msg 
-  = Something
+  = Click
 
 main : Program Never Model Msg
 main =
@@ -22,8 +23,18 @@ myModel =
   True
 
 -- Render the state of the application as HTML
+
+-- Render state of application as Html
 myView : Model -> Html.Html Msg
-myView x = Html.text "Hello" 
+myView x = 
+  Html.div
+    []
+    [
+      Html.button 
+        [Html.Events.onClick Click] 
+        [ Html.text "Click me"]
+      , Html.text "Hello"
+    ]
 
 myUpdate : Msg -> Model -> Model 
 myUpdate x y = y
